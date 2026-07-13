@@ -1,0 +1,35 @@
+{
+  "name": "nestjs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "src/apps/*",
+    "src/packages/*"
+  ],
+  "scripts": {
+    "build": "nest build",
+    "build:admin": "nest build admin",
+    "build:front": "nest build front",
+    "build:all": "npm run build:admin && npm run build:front",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "start:dev:admin": "nest start admin --watch",
+    "start:dev:front": "nest start front --watch"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/core": "^11.0.1",
+    "@nestjs/platform-express": "^11.0.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.3"
+  }
+}
