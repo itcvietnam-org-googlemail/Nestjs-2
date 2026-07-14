@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "npm@11.9.0",
   "workspaces": [
     "src/apps/*",
     "src/packages/*"
   ],
+  "imports": {
+    "#admin/*": "./dist/admin/*.js"
+  },
   "scripts": {
     "build": "nest build",
     "build:admin": "nest build admin",
@@ -17,7 +21,9 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "start:dev:admin": "nest start admin --watch",
-    "start:dev:front": "nest start front --watch"
+    "start:dev:front": "nest start front --watch",
+    "turbo:start:dev:admin": "turbo run dev:admin --filter=@app/admin",
+    "turbo:start:dev:front": "turbo run dev:front --filter=@app/front"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -30,6 +36,7 @@
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@types/node": "^24.0.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "turbo": "^2.10.5"
   }
 }

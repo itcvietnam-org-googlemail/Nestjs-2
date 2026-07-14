@@ -1,0 +1,19 @@
+{
+  "name": "@app/front",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nest build",
+    "build:admin": "nest build admin",
+    "build:front": "nest build front",
+    "build:all": "npm run build:admin && npm run build:front",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "start:dev:admin": "nest start admin --watch",
+    "start:dev:front": "nest start front --watch",
+    "dev:front": "nest start front --watch"
+  }
+}

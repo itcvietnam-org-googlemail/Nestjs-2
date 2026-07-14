@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "dev:admin": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "dev:front": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    }
+  }
+}
