@@ -8,22 +8,16 @@
     "src/apps/*",
     "src/packages/*"
   ],
-  "imports": {
-    "#admin/*": "./dist/admin/*.js"
-  },
   "scripts": {
-    "build": "nest build",
-    "build:admin": "nest build admin",
-    "build:front": "nest build front",
-    "build:all": "npm run build:admin && npm run build:front",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "start:dev:admin": "nest start admin --watch",
-    "start:dev:front": "nest start front --watch",
-    "turbo:start:dev:admin": "turbo run dev:admin --filter=@app/admin",
-    "turbo:start:dev:front": "turbo run dev:front --filter=@app/front"
+    "dev": "turbo run dev --filter=@app/*",
+    "build": "turbo run build --filter=@app/*",
+    "prod": "turbo run prod --filter=@app/*",
+    "admin:dev": "turbo run dev --filter=@app/admin",
+    "admin:build": "turbo run build --filter=@app/admin",
+    "admin:prod": "turbo run prod --filter=@app/admin",
+    "front:dev": "turbo run dev --filter=@app/front",
+    "front:build": "turbo run build --filter=@app/front",
+    "front:prod": "turbo run prod --filter=@app/front"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
