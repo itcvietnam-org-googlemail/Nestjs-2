@@ -1,21 +1,26 @@
+# Name
+name: admin
+
+# Networks
+networks:
+    default:
+        name: admin
+
+# Services
 services:
-    #PostgreSQL
+    # PostgreSQL
     postgresql:
-        container_name: postgresql
         image: postgres:18
-        ports:
-            - "5432:5432"
         volumes:
             - ../data/postgresql:/var/lib/postgresql
         restart: always
         environment:
-            POSTGRES_USER: "root"
-            POSTGRES_PASSWORD: "nestjs@123"
-            POSTGRES_DB: "nestjs"
+            POSTGRES_USER: "${DB_USER}"
+            POSTGRES_PASSWORD: "${DB_PASS}"
+            POSTGRES_DB: "${DB_NAME}"
 
-    #Nestjs
+    # Nestjs
     nestjs:
-        container_name: nestjs
         ports:
           - "3000:${PORT}"
         volumes:
@@ -24,6 +29,7 @@ services:
             - postgresql
         build:
             context: ../
+            target: ${NODE_ENV}
             dockerfile: docker/admin.dockerfile
         environment:
             APP: "${APP}"
