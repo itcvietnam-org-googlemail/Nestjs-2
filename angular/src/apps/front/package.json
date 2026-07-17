@@ -1,0 +1,11 @@
+{
+    "name": "@app/front",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "ng serve front",
+        "build": "ng build front",
+        "serve": "node dist/server/server.mjs"
+    }
+}

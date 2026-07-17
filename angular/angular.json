@@ -1,0 +1,142 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "cli": {
+        "packageManager": "npm",
+        "analytics": false
+    },
+    "projects": {
+        "admin": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "src/apps/admin",
+            "sourceRoot": "src/apps/admin/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular/build:application",
+                    "options": {
+                        "outputPath": "src/apps/admin/dist",
+                        "browser": "src/apps/admin/src/main.ts",
+                        "tsConfig": "src/apps/admin/tsconfig.json",
+                        "inlineStyleLanguage": "scss",
+                        "styles": [
+                            "src/apps/admin/src/style.scss"
+                        ]
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "500kB",
+                                    "maximumError": "1MB"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "4kB",
+                                    "maximumError": "8kB"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "optimization": false,
+                            "extractLicenses": false,
+                            "sourceMap": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular/build:dev-server",
+                    "configurations": {
+                        "production": {
+                            "buildTarget": "admin:build:production"
+                        },
+                        "development": {
+                            "buildTarget": "admin:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                }
+            }
+        },
+        "front": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "src/apps/front",
+            "sourceRoot": "src/apps/front/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular/build:application",
+                    "options": {
+                        "outputPath": "src/apps/front/dist",
+                        "browser": "src/apps/front/src/main.ts",
+                        "tsConfig": "src/apps/front/tsconfig.json",
+                        "inlineStyleLanguage": "scss",
+                        "styles": [
+                            "src/apps/front/src/style.scss"
+                        ],
+                        "server": "src/apps/front/src/main.server.ts",
+                        "outputMode": "server",
+                        "security": {
+                            "allowedHosts": [
+                                "localhost",
+                                "friendly-acorn-jj7v65pgw5q42jqj4-4000.app.github.dev",
+                                "friendly-acorn-jj7v65pgw5q42jqj4-4200.app.github.dev"
+                            ]
+                        },
+                        "ssr": {
+                            "entry": "src/apps/front/src/server.ts"
+                        }
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "500kB",
+                                    "maximumError": "1MB"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "4kB",
+                                    "maximumError": "8kB"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "optimization": false,
+                            "extractLicenses": false,
+                            "sourceMap": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular/build:dev-server",
+                    "configurations": {
+                        "production": {
+                            "buildTarget": "front:build:production"
+                        },
+                        "development": {
+                            "buildTarget": "front:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                }
+            }
+        }
+    }
+}

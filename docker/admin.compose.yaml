@@ -33,3 +33,16 @@ services:
             dockerfile: docker/admin.dockerfile
         environment:
             APP: "${APP}"
+
+    # Angular
+    angular:
+        ports:
+          - "4200:${PORT_ANGULAR}"
+        volumes:
+          - ../angular/src:/angular/src
+        build:
+            context: ../
+            target: ${NODE_ENV}
+            dockerfile: docker/admin.dockerfile
+        environment:
+            APP: "${APP}"
