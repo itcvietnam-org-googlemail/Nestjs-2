@@ -4,7 +4,10 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "ng serve admin",
-        "build": "ng build admin"
+        "dev": "ng serve admin --watch",
+        "build": "ng build admin --configuration development"
+    },
+    "dependencies": {
+        "@package/auth": "*"
     }
 }

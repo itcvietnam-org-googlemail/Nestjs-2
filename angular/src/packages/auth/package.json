@@ -1,0 +1,13 @@
+{
+    "name": "@package/auth",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "sideEffects": false,
+    "main": "./dist/@package/auth/fesm2022/package-auth.mjs",
+    "types": "./dist/@package/auth/types/package-auth.d.ts",
+    "scripts": {
+        "dev": "ng-packagr -p ng-package.json --watch",
+        "build": "ng-packagr -p ng-package.json"
+    }
+}
