@@ -137,6 +137,34 @@
                     "defaultConfiguration": "development"
                 }
             }
+        },
+        "@package/auth": {
+            "projectType": "library",
+            "root": "src/packages/auth",
+            "sourceRoot": "src/packages/auth/src",
+            "prefix": "auth",
+            "architect": {
+                "build": {
+                    "builder": "@angular/build:ng-packagr",
+                    "options": {
+                        "project": "src/packages/auth/build.json"
+                    }
+                }
+            }
+        },
+        "@package/user": {
+            "projectType": "library",
+            "root": "src/packages/user",
+            "sourceRoot": "src/packages/user/src",
+            "prefix": "user",
+            "architect": {
+                "build": {
+                    "builder": "@angular/build:ng-packagr",
+                    "options": {
+                        "project": "src/packages/user/build.json"
+                    }
+                }
+            }
         }
     }
 }

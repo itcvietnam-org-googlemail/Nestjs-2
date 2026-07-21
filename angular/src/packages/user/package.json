@@ -1,0 +1,10 @@
+{
+    "name": "@package/user",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "ng build @package/user --watch",
+        "build": "ng build @package/user"
+    }
+}

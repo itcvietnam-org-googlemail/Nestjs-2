@@ -3,14 +3,10 @@
     "version": "0.0.0",
     "private": true,
     "type": "module",
+    "main": "../../../dist/user/index.js",
+    "types": "../../../dist/user/index.d.ts",
     "scripts": {
         "dev": "tsc --watch",
         "build": "tsc"
-    },
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        }
     }
 }

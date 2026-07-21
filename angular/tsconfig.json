@@ -11,7 +11,11 @@
         "skipLibCheck": true,
         "isolatedModules": true,
         "experimentalDecorators": true,
-        "importHelpers": true
+        "importHelpers": true,
+        "paths": {
+            "@package/auth": ["./dist/@package/auth"],
+            "@package/user": ["./dist/@package/user"]
+        }
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
