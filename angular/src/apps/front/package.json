@@ -6,6 +6,6 @@
     "scripts": {
         "dev": "ng serve front",
         "build": "ng build front",
-        "serve": "node dist/server/server.mjs"
+        "serve": "node ../../../dist/@app/front/server/server.mjs"
     }
 }

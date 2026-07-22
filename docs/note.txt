@@ -21,3 +21,41 @@
     package-lock.json
     package.json
     src
+
+################################
+
+- Scripts:
+
++ development:start
++ production:build
++ production:start
+
++ admin::development:start
++ admin::production:build
++ admin::production:start
+
++ front::development:start
++ front::production:build
++ front::production:start
+
+- Dockerfile stages:
+
++ base
+
++ development.runner
++ production.pruner
++ production.installer
++ production.builder
++ production.runner
+
++ admin.development.runner
++ admin.production.pruner
++ admin.production.installer
++ admin.production.builder
++ admin.production.runner
+
++ front.development.runner
++ front.production.pruner
++ front.production.installer
++ front.production.builder
++ front.production.runner

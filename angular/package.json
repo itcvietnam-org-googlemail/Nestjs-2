@@ -9,13 +9,13 @@
         "src/packages/*"
     ],
     "scripts": {
-        "dev": "turbo run dev --filter=@app/*",
+        "dev": "turbo run dev --filter=@app/*... --force",
         "build": "turbo run build --filter=@app/*",
         "prod": "turbo run prod --filter=@app/*",
-        "admin:dev": "turbo run dev --filter=@app/admin",
+        "admin:dev": "turbo run dev --filter=@app/admin... --force",
         "admin:build": "turbo run build --filter=@app/admin",
         "admin:prod": "turbo run prod --filter=@app/admin",
-        "front:dev": "turbo run dev --filter=@app/front",
+        "front:dev": "turbo run dev --filter=@app/front... --force",
         "front:build": "turbo run build --filter=@app/front",
         "front:serve": "turbo run serve --filter=@app/front",
         "front:prod": "turbo run prod --filter=@app/front"

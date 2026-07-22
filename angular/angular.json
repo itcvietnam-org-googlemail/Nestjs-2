@@ -20,7 +20,7 @@
                 "build": {
                     "builder": "@angular/build:application",
                     "options": {
-                        "outputPath": "src/apps/admin/dist",
+                        "outputPath": "dist/@app/admin",
                         "browser": "src/apps/admin/src/main.ts",
                         "tsConfig": "src/apps/admin/tsconfig.json",
                         "inlineStyleLanguage": "scss",
@@ -80,7 +80,7 @@
                 "build": {
                     "builder": "@angular/build:application",
                     "options": {
-                        "outputPath": "src/apps/front/dist",
+                        "outputPath": "dist/@app/front",
                         "browser": "src/apps/front/src/main.ts",
                         "tsConfig": "src/apps/front/tsconfig.json",
                         "inlineStyleLanguage": "scss",
