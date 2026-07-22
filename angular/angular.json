@@ -147,7 +147,7 @@
                 "build": {
                     "builder": "@angular/build:ng-packagr",
                     "options": {
-                        "project": "src/packages/auth/build.json"
+                        "project": "src/packages/auth/library.json"
                     }
                 }
             }
@@ -161,7 +161,7 @@
                 "build": {
                     "builder": "@angular/build:ng-packagr",
                     "options": {
-                        "project": "src/packages/user/build.json"
+                        "project": "src/packages/user/library.json"
                     }
                 }
             }
