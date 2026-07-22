@@ -24,24 +24,24 @@ COPY nestjs/package-lock.json .
 COPY nestjs/turbo.json .
 COPY nestjs/tsconfig.json .
 COPY nestjs/nest-cli.json .
-RUN npx turbo prune @app/admin --docker
+RUN npx turbo prune @app/admin --out-dir ./output --docker --production
 
 # Install
 FROM base AS install
-COPY --from=prune /nestjs/out/json/ .
+COPY --from=prune /nestjs/output/json/ .
 RUN npm ci
 
 # Build
 FROM base AS build
 COPY nestjs/tsconfig.json .
 COPY nestjs/nest-cli.json .
-COPY --from=prune /nestjs/out/full/ .
+COPY --from=prune /nestjs/output/full/ .
 COPY --from=install /nestjs/node_modules node_modules
 RUN npx turbo run build --filter=@app/admin
 
 # Production
 FROM base AS production
-COPY --from=prune /nestjs/out/json/ .
+COPY --from=prune /nestjs/output/json/ .
 COPY --from=install /nestjs/node_modules node_modules
 COPY --from=build /nestjs/dist dist
 CMD ["node", "dist/admin/main.js"]

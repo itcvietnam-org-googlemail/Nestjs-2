@@ -1,0 +1,23 @@
+/nestjs # ls
+    nest-cli.json
+    out
+    package-lock.json
+    package.json
+    src
+    tsconfig.json
+    turbo.json
+
+/nestjs/out # ls
+    full
+    json
+    package-lock.json
+
+/nestjs/out/full # ls
+    package.json
+    src
+    turbo.json
+
+/nestjs/out/json # ls
+    package-lock.json
+    package.json
+    src

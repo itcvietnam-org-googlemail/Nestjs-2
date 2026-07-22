@@ -1,0 +1,21 @@
+# CONTAINER:
+docker stop <container>
+docker start admin-nestjs-1
+docker exec -it admin-nestjs-1 sh
+
+# IMAGE:
+docker ps (View docker status)
+docker images (View image list)
+docker run --rm -it admin-nestjs:latest sh
+docker run --rm -p 3000:3000 admin-nestjs:latest (Run image with port 3000)
+docker run --rm --env-file docker/admin.prod.env -p 3000:3000 admin-nestjs:latest
+docker build --target production -t admin-nestjs:latest .
+docker run --rm -it admin-nestjs:latest
+docker run --rm <image> find /nestjs -maxdepth 3 (Ex: docker run --rm admin-nestjs find /nestjs -maxdepth 3)
+docker run --rm <image> find /nestjs -name "*.ts" (Ex: docker run --rm admin-nestjs find /nestjs -name "*.ts")
+
+docker build -f docker/admin.dockerfile --target prune -t debug-prune . (Build by stage, run in root)
+docker run --rm -it debug-prune sh (Run "debug-prune" image)
+
+#UTILITIES:
+docker system prune -a -f --volumes
