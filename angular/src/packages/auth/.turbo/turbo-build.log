@@ -1,0 +1,25 @@
+
+> @package/auth@0.0.0 build
+> ng build @package/auth
+
+[34mBuilding Angular Package[39m
+[37m
+------------------------------------------------------------------------------[39m
+[37mBuilding entry point '@package/auth'[39m
+[37m------------------------------------------------------------------------------[39m
+[?2026h[1G[36m⠋[39m Compiling with Angular sources in partial compilation mode.[?2026l[1G[0K[32m✔[39m Compiling with Angular sources in partial compilation mode.
+[1G[32m✔[39m Generating FESM and DTS bundles
+[?2026h[1G[36m⠋[39m Copying assets[?2026l[1G[0K[32m✔[39m Copying assets
+[?2026h[1G[36m⠋[39m Writing package manifest[?2026l[1G[0K[34mℹ[39m Removing scripts section in package.json as it's considered a potential security vulnerability.
+[1G[32m✔[39m Writing package manifest
+[1G[32m✔[39m Built @package/auth
+[32m
+------------------------------------------------------------------------------[39m
+[32mBuilt Angular Package
+- from: /workspaces/Nestjs-2/angular/src/packages/auth
+- to:   /workspaces/Nestjs-2/angular/dist/@package/auth[39m
+[32m------------------------------------------------------------------------------[39m
+[37m[37m
+Build at: [1m2026-08-02T11:29:25.794Z[22m - Time: [1m6275[22mms
+[39m[39m
+⠙[1G[0K

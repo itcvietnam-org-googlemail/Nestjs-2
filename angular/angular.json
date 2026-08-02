@@ -26,6 +26,13 @@
                         "inlineStyleLanguage": "scss",
                         "styles": [
                             "src/apps/admin/src/style.scss"
+                        ],
+                        "assets": [
+                            {
+                                "glob": "**/*.json",
+                                "input": "src/apps/admin/src/translations",
+                                "output": "translations"
+                            }
                         ]
                     },
                     "configurations": {

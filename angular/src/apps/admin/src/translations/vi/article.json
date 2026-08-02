@@ -1,0 +1,6 @@
+{
+    "article": "Bài viết...",
+    "title": "Tiêu đề...",
+    "address": "Địa chỉ...",
+    "count": "Đếm {{ count }}"
+}
