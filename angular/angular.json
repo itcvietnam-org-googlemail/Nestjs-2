@@ -96,13 +96,6 @@
                         ],
                         "server": "src/apps/front/src/main.server.ts",
                         "outputMode": "server",
-                        "security": {
-                            "allowedHosts": [
-                                "localhost",
-                                "friendly-acorn-jj7v65pgw5q42jqj4-4000.app.github.dev",
-                                "friendly-acorn-jj7v65pgw5q42jqj4-4200.app.github.dev"
-                            ]
-                        },
                         "ssr": {
                             "entry": "src/apps/front/src/server.ts"
                         }
@@ -121,12 +114,22 @@
                                     "maximumError": "8kB"
                                 }
                             ],
-                            "outputHashing": "all"
+                            "outputHashing": "all",
+                            "security": {
+                                "allowedHosts": [
+                                    "*"
+                                ]
+                            }
                         },
                         "development": {
                             "optimization": false,
                             "extractLicenses": false,
-                            "sourceMap": true
+                            "sourceMap": true,
+                            "security": {
+                                "allowedHosts": [
+                                    "*"
+                                ]
+                            }
                         }
                     },
                     "defaultConfiguration": "production"

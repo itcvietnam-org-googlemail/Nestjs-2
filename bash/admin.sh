@@ -28,7 +28,7 @@ esac
 
 # Run command
 if [ "${ENVIRONMENT}" = "prod" ]; then
-    docker compose -f "${ROOT_PATH}/docker/admin.compose.yaml" --env-file "${ROOT_PATH}/docker/admin.prod.env" up nestjs --build --force-recreate
+    docker compose -f "${ROOT_PATH}/docker/admin.compose.yaml" --env-file "${ROOT_PATH}/docker/admin.prod.env" up nestjs.admin.engine --build --force-recreate
 else
-    docker compose -f "${ROOT_PATH}/docker/admin.compose.yaml" --env-file "${ROOT_PATH}/docker/admin.${ENVIRONMENT}.env" up nestjs --build --force-recreate
+    docker compose -f "${ROOT_PATH}/docker/admin.compose.yaml" --env-file "${ROOT_PATH}/docker/admin.${ENVIRONMENT}.env" up nestjs.admin.engine --build --force-recreate
 fi

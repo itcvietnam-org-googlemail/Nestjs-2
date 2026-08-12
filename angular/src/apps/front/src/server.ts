@@ -12,9 +12,7 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine({
     allowedHosts: [
-        'localhost',
-        'friendly-acorn-jj7v65pgw5q42jqj4-4000.app.github.dev',
-        'friendly-acorn-jj7v65pgw5q42jqj4-4200.app.github.dev'
+        '*.app.github.dev'
     ],
     trustProxyHeaders: [
         'x-forwarded-for',

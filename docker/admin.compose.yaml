@@ -20,7 +20,9 @@ services:
             POSTGRES_DB: "${DB_NAME}"
 
     # Nestjs
-    nestjs:
+    nestjs.admin.engine:
+        image: x.nestjs.admin.engine:1.0.0
+        container_name: nestjs.admin.engine
         ports:
           - "3000:${PORT}"
         volumes:

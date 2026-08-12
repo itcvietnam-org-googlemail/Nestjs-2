@@ -10,7 +10,7 @@ COPY nestjs/package-lock.json .
 COPY nestjs/turbo.json .
 COPY nestjs/tsconfig.json .
 COPY nestjs/nest-cli.json .
-ENV NODE_ENV=development
+# ENV NODE_ENV=development
 RUN npm install
 CMD ["sh", "-c", "npm run admin:dev"]
 
