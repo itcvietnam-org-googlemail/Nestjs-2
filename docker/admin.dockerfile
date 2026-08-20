@@ -12,7 +12,7 @@ COPY nestjs/tsconfig.json .
 COPY nestjs/nest-cli.json .
 # ENV NODE_ENV=development
 RUN npm install
-CMD ["sh", "-c", "npm run admin:dev"]
+CMD ["npm", "run", "admin:dev"]
 
 # START PRODUCTION DOCKER
 

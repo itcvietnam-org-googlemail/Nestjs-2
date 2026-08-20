@@ -12,19 +12,23 @@
     "dev": "turbo run dev --filter=@app/*",
     "build": "turbo run build --filter=@app/*",
     "prod": "turbo run prod --filter=@app/*",
-    "admin:dev": "turbo run dev --filter=@app/admin",
+    "admin:dev": "turbo run dev --filter=@app/admin... --force",
     "admin:build": "turbo run build --filter=@app/admin",
     "admin:prod": "turbo run prod --filter=@app/admin",
-    "front:dev": "turbo run dev --filter=@app/front",
+    "front:dev": "turbo run dev --filter=@app/front... --force",
     "front:build": "turbo run build --filter=@app/front",
     "front:prod": "turbo run prod --filter=@app/front"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.4",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/typeorm": "^11.0.1",
+    "pg": "^8.23.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "typeorm": "^1.1.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.0",
