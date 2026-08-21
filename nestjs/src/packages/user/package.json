@@ -8,5 +8,8 @@
     "scripts": {
         "dev": "tsc --watch",
         "build": "tsc"
+    },
+    "dependencies": {
+        "@package/config": "*"
     }
 }

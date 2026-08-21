@@ -1,0 +1,12 @@
+{
+    "name": "@package/config",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "main": "../../../dist/config/index.js",
+    "types": "../../../dist/config/index.d.ts",
+    "scripts": {
+        "dev": "tsc --watch",
+        "build": "tsc"
+    }
+}

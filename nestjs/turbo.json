@@ -4,7 +4,10 @@
         "dev": {
             "cache": false,
             "persistent": true,
-            "dependsOn": ["^build"]
+            "dependsOn": ["^build"],
+            "passThroughEnv": [
+                "*"
+            ]
         },
         "build": {
             "dependsOn": ["^build"],

@@ -1,15 +1,16 @@
 //Import(s)
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { ConfigModule } from '@package/config';
 
 import { AuthModule } from '@package/auth';
 import { UserModule } from '@package/user';
+import { UserEntity } from '@package/user';
 
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { AppEntity } from './app.entity.js';
-
 import { appConfig } from './app.config.js';
 
 //Metadata(s)
@@ -28,7 +29,8 @@ import { appConfig } from './app.config.js';
             password: 'nestjs-dev@123',
             database: process.env.DB_NAME ?? 'nestjs_dev',
             entities: [
-                AppEntity
+                AppEntity,
+                UserEntity
             ],
             synchronize: true
         }),

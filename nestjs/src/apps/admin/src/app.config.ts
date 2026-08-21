@@ -1,8 +1,8 @@
-import { registerAs } from '@nestjs/config';
+import { registerAs } from '@package/config';
 import { UserConfig } from '@package/user';
 
 export const userConfig: Partial<UserConfig> = {
-    itemLimit: 100000
+    itemLimit: 600
 };
 
 export const appConfig = [

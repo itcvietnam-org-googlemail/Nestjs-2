@@ -27,6 +27,7 @@ services:
           - "3000:${PORT}"
         volumes:
           - ../nestjs/src:/nestjs/src
+          - ../nestjs/dist:/nestjs/dist
         depends_on:
             - postgresql
         build:
@@ -35,6 +36,7 @@ services:
             dockerfile: docker/admin.dockerfile
         environment:
             APP: "${APP}"
+            USER_REALTIME_URL: "https://user.api"
 
     # Angular
     angular:

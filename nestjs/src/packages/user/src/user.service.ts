@@ -9,6 +9,6 @@ export class UserService {
         private readonly config: UserConfig,
     ) {}
     getHello(): string {
-        return `[App::Admin - Package::User] User --- ${this.config.itemLimit}`;
+        return `[App::Admin - Package::User] User # ${this.config.itemLimit} - ${this.config.perPage}`;
     }
 }
