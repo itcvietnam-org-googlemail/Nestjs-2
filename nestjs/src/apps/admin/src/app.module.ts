@@ -1,24 +1,24 @@
-//Import(s)
+/*
+* Import
+*/
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-
 import { ConfigModule } from '@package/config';
-
 import { AuthModule } from '@package/auth';
-import { UserModule } from '@package/user';
-import { UserEntity } from '@package/user';
-
+import { UserModule, UserEntity } from '@package/user';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { AppEntity } from './app.entity.js';
-import { appConfig } from './app.config.js';
+import { appConfig, appPlainConfig } from './app.config.js';
 
-//Metadata(s)
+/*
+* Export
+*/
 @Module({
     imports: [
         ConfigModule.forRoot({
             isGlobal: true,
-            load: appConfig
+            load: appPlainConfig
         }),
 
         TypeOrmModule.forRoot({
@@ -41,6 +41,4 @@ import { appConfig } from './app.config.js';
     controllers: [AppController],
     providers: [AppService]
 })
-
-//Export(s)
 export class AppModule {}
